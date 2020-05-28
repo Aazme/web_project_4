@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Around the U.S.</title>
+    <link rel="stylesheet" href="./vendors/normalize.css">
+    <link rel="stylesheet" href="./pages/index.css">
+    
 </head>
-<body>
+<body class="root">
 
 <!-- Header Section -->
 <header class="header">
@@ -15,27 +18,31 @@
 <!-- Main Section -->
 <main>
     <!-- Profile Section-->
-    <section>
+    <section class="profile">
         <!-- image div -->
-        <div>
-
-        </div>
+        <img src="" alt="" class="profile__pic">
 
         <!-- Profile Info -->
-        <div>
-
+        <div class="profile__info">
+            <p class="profile__name"></p>
+            <p class="profile__job"></p>
+            <button class="button button_edit"></button>
         </div>
-
         <!-- Add Button -->
+        <button class="button button_add"></button>
     </section>
     <!-- Favourites Cards List -->
-    <section>
-    <ul>
-        <li>
+
+    <section class="cards">
+    <ul class="cards__list">
+        <li class="card">
             <!-- Image Div -->
-            <div></div>
+            <img src="" alt="" class="card__image">
             <!-- Info Div -->
-            <div></div>
+            <div class="card__info">
+                <p class="card__title"></p>
+                <button class="button button_like"></button>
+            </div>
         </li>
 
     </ul>
@@ -43,9 +50,9 @@
 </main>
 
 <!-- Footer Section -->
-<footer>
+<footer class="footer">
     <!-- Footer -->
-<p>Abdulrahman Azmy</p>
+<p class="footer__copyright">Abdulrahman Azmy</p>
 </footer>
 </body>
 </html>
