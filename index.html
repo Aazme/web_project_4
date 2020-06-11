@@ -4,55 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Around the U.S.</title>
-    <link rel="stylesheet" href="./vendors/normalize.css">
     <link rel="stylesheet" href="./pages/index.css">
-    
 </head>
 <body class="root">
-
-<!-- Header Section -->
-<header class="header">
-<img class="header__logo" src="" alt="">
-</header>
-
-<!-- Main Section -->
-<main>
-    <!-- Profile Section-->
-    <section class="profile">
-        <!-- image div -->
-        <img src="" alt="" class="profile__pic">
-
-        <!-- Profile Info -->
-        <div class="profile__info">
-            <p class="profile__name"></p>
-            <p class="profile__job"></p>
-            <button class="button button_edit"></button>
-        </div>
-        <!-- Add Button -->
-        <button class="button button_add"></button>
-    </section>
-    <!-- Favourites Cards List -->
-
-    <section class="cards">
-    <ul class="cards__list">
-        <li class="card">
-            <!-- Image Div -->
-            <img src="" alt="" class="card__image">
-            <!-- Info Div -->
-            <div class="card__info">
-                <p class="card__title"></p>
-                <button class="button button_like"></button>
-            </div>
-        </li>
-
-    </ul>
-    </section>
-</main>
-
-<!-- Footer Section -->
-<footer class="footer">
-    <!-- Footer -->
-<p class="footer__copyright">Abdulrahman Azmy</p>
-</footer>
+    <div class="root__container">
+        <header class="header">
+            <img class="logo" src="./images/Vector.svg" alt="logo"/>
+        </header>
+        <main>
+            <section class="profile">
+                    <img class="profile__pic" src="./images/avatar.png" alt="avatar"/>
+                    <div class="profile__info">
+                        <h1 class="profile__name">Jacques Cousteau</h1>
+                        <p class="profile__about-me">Explorer</p>
+                        <button class="button button_edit"></button>
+                    </div>
+                    <button class=" button button_add"></button>
+            </section>
+            <section class="elements">
+                <ul class="elements__list">
+                    <li class="elements__item">
+                        <div class="elements__image"  style="background-image: url('./images/yosemite.png')"></div>
+                        <div class="elements__footer">
+                            <h3 class="elements__title">Yosemite Valley</h3>
+                            <button class="button button_like"> </button>
+                        </div>
+                    </li>
+                    <li class="elements__item">
+                        <div class="elements__image"  style="background-image: url('./images/lake.png')"></div>
+                        <div class="elements__footer">
+                            <h3 class="elements__title">Lake Louise</h3>
+                            <button class="button button_like"> </button>
+                        </div>
+                    </li>
+                    <li class="elements__item">
+                        <div class="elements__image"  style="background-image: url('./images/bald.png')"></div>
+                        <div class="elements__footer">
+                            <h3 class="elements__title">Bald Mountains</h3>
+                            <button class="button button_like"> </button>
+                        </div>
+                    </li>
+                    <li class="elements__item">
+                        <div class="elements__image"  style="background-image: url('./images/latemar.png')"></div>
+                        <div class="elements__footer">
+                            <h3 class="elements__title">Latemar</h3>
+                            <button class="button button_like"> </button>
+                        </div>
+                    </li>
+                    <li class="elements__item">
+                        <div class="elements__image"  style="background-image: url('./images/vanois.png')"></div>
+                        <div class="elements__footer">
+                            <h3 class="elements__title">Vanois Nationality</h3>
+                            <button class="button button_like"> </button>
+                        </div>
+                    </li>
+                    <li class="elements__item">
+                        <div class="elements__image"  style="background-image: url('./images/lago.png')"></div>
+                        <div class="elements__footer">
+                            <h3 class="elements__title">Lago di Braies</h3>
+                            <button class="button button_like"> </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">&copy; 2020 Abdulrahman Azmy</p>
+        </footer>
+        <section class="popup popup_is-opened">
+            <form class="form">
+                <button class="button button_close"></button>
+                <h2 class="form__title">Edit profile</h2>
+                <input class="form__input form__input_name" type="text" value="Jacques Cousteau" placeholder="Name"/>
+                <input class="form__input form__input_about" type="text" value="Explorer" placeholder="About me"/>
+                <button class="form__submit-button">Save</button>
+            </form>
+        </section>
+    </div>
+    <script src="./pages/index.js"></script>
 </body>
 </html>
