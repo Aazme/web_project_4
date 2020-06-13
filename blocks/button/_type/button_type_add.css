@@ -1,4 +1,4 @@
-.button_add{
+.button_type_add{
     width: 150px;
     height: 50px;
     border: 2px solid #FFFFFF;
@@ -13,17 +13,17 @@
     background: url('../../../images/add.svg') no-repeat center;
 }
 
-.button_add:hover{
+.button_type_add:hover{
     opacity: 0.6;
 }
 @media screen and (max-width: 800px){
-    .button_add{
+    .button_type_add{
        margin: 36px auto auto auto;
     }
 }
 
 @media screen and (max-width: 480px){
-    .button_add{
+    .button_type_add{
        width: 100%;
     }
 }
