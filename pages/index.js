@@ -8,16 +8,12 @@ const about = form.querySelector('.form__input_type_about');
 const profileName = document.querySelector('.profile__name');
 const profileAboutMe = document.querySelector('.profile__about-me');
 
-function showpopup(){
-    popup.classList.add('popup_is-opened');
-    popup.style.display = 'flex'
+function togglePopup(){
+    popup.classList.toggle('popup_is-opened');
 }
-function hidepopup(){
-    popup.classList.remove('popup_is-opened');
-    popup.style.display = 'none'
-}
-editBtn.addEventListener("click", showpopup);
-closeBtn.addEventListener("click", hidepopup);
+
+editBtn.addEventListener("click", togglePopup);
+closeBtn.addEventListener("click", togglePopup);
 
 //edit profile
 
@@ -26,7 +22,7 @@ function onSubmit(event){
     event.preventDefault(); 
     profileName.textContent = Username.value;
     profileAboutMe.textContent = about.value;
-    hidepopup();
+    togglePopup();
 
 }
 form.addEventListener('submit', onSubmit); 
