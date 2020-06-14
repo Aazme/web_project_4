@@ -4,3 +4,12 @@
     gap:  20px 18px;
     padding: 0;
 }
+
+
+
+@media screen and (max-width: 480px){
+    .elements__list{
+        margin-left: 20px;
+        margin-right: 20px;
+        }
+}

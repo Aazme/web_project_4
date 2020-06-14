@@ -4,3 +4,11 @@
                           'about about'  ;
     column-gap: 24px;
 }
+
+
+@media screen and (max-width: 480px){
+    .profile__info{
+        column-gap: 12px;
+
+        }
+}

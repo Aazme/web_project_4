@@ -15,3 +15,11 @@
 .button_type_edit:hover{
     opacity: 0.6;
 }
+
+
+@media screen and (max-width: 480px){
+    .button_type_edit{
+        width: 18px;
+        height: 18px;
+        }
+}
