@@ -1,0 +1,7 @@
+
+.popup__content{
+    position: relative;
+    max-width: 430px;
+    height: 330px;
+    margin: auto;
+}
