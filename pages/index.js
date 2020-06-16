@@ -99,13 +99,14 @@ const createCard = (data) => {
         cardLikeButton.classList.toggle('button_type_like-active');
     });
 
-    cardRemoveButton.addEventListener('click', (e) => {
+    cardRemoveButton.addEventListener('click', () => {
         cardImage.parentNode.remove();
     }); 
 
     cardImage.addEventListener('click', () => {
         togglePopup(imageModal);
         imageModalmage.src = `${data.link}`;
+        imageModalmage.alt = data.name;
         imageModalCaption.textContent = data.name;
     })
     return cardElement;
