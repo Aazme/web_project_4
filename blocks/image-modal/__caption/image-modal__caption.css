@@ -1,0 +1,14 @@
+.image-modal__caption {
+    margin-top: 10px;
+    max-width: 291px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+}
+
+@media screen and (max-width: 685px) {
+    .image-modal__caption {
+        max-width: 240px;
+    }
+} 

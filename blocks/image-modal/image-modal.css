@@ -1,0 +1,7 @@
+@import url(./__image/image-modal__image.css);
+@import url(./__caption/image-modal__caption.css);
+
+
+.image-modal {
+    margin: 0;
+} 
