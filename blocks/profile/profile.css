@@ -6,14 +6,12 @@
 .profile{
     display: flex;
     align-items: center;
-    margin: 36px 0;
+    margin: 36px;
 }
 
 @media screen and (max-width: 800px){
     .profile{
         flex-direction: column;
         justify-content: center;
-        margin: 0px 20px;
-
     }
 }

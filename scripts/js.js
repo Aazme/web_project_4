@@ -4,6 +4,7 @@ const addPhotoModal = document.querySelector('.popup_type_add-photo');
 const imageModal = document.querySelector('.popup_type_image');
 const form = document.querySelector('.form');
 
+
 //Buttons and other DOM elements
 const editButton = document.querySelector('.button_type_edit');
 const editProfileCloseButton = editProfileModal.querySelector('.button_type_close');
@@ -25,6 +26,21 @@ function togglePopup(modal) {
     modal.classList.toggle('popup_opened');
 }
 
+function escAndClick(pop) {
+    // Popups close with click outside box
+    pop.addEventListener('click', (evt) => {
+      if (evt.target.classList.contains("popup")) {
+        pop.classList.remove("popup_opened");
+  
+      }
+    });
+  
+    window.addEventListener("keyup", (evt) => {
+      if (evt.key === "Escape") {
+        pop.classList.remove("popup_opened");
+      }
+    });
+  };
 
 function formSubmitHandler(event) { 
     event.preventDefault();
@@ -37,21 +53,29 @@ form.addEventListener('submit', formSubmitHandler);
 
 editButton.addEventListener('click', () => {
     togglePopup(editProfileModal);
+    escAndClick(editProfileModal)
 });
 editProfileCloseButton.addEventListener('click', () => {
     togglePopup(editProfileModal);
+    escAndClick(editProfileModal)
 });
 
 addButton.addEventListener('click', () => {
     togglePopup(addPhotoModal);
+    escAndClick(addPhotoModal)
 });
 addPhotoCloseButton.addEventListener('click', () => {
     togglePopup(addPhotoModal);
+    escAndClick(addPhotoModal)
 });
 
 imageCloseButton.addEventListener('click', () => {
     togglePopup(imageModal);
+    escAndClick(imageModal)
 });
+
+
+
 
 
 const initialCards = [
@@ -89,8 +113,8 @@ const createCard = (data) => {
     const cardImage = cardElement.querySelector('.elements__image');
     const cardLikeButton = cardElement.querySelector('.button_type_like');
     const cardRemoveButton = cardElement.querySelector('.button_type_delete');
-    const imageModalmage = imageModal.querySelector('.image-modal__image');
-    const imageModalCaption = imageModal.querySelector('.image-modal__caption');
+    const figureImage = imageModal.querySelector('.figure__image');
+    const figureCaption = imageModal.querySelector('.figure__caption');
 
     cardTitle.textContent = data.name;
     cardImage.style.backgroundImage = `url(${data.link})`;
@@ -105,9 +129,8 @@ const createCard = (data) => {
 
     cardImage.addEventListener('click', () => {
         togglePopup(imageModal);
-        imageModalmage.src = `${data.link}`;
-        imageModalmage.alt = data.name;
-        imageModalCaption.textContent = data.name;
+        figureImage.src = `${data.link}`;
+        figureCaption.textContent = data.name;
     })
     return cardElement;
 }
@@ -130,3 +153,4 @@ function photoSubmitHandler(event) {
 }
 
 addPhotoModal.addEventListener('submit', photoSubmitHandler);
+

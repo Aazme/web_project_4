@@ -1,3 +1,5 @@
+@import url('../vendors/normalize.css');
+@import url('../fonts/inter/inter.css');
 @import url('../blocks/root/root.css');
 @import url('../blocks/header/header.css');
 @import url('../blocks/logo/logo.css');
@@ -7,6 +9,5 @@
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/form/form.css');
 @import url('../blocks/popup/popup.css');
-@import url('../blocks/popup/_is-opened/popup_is-opened.css');
 @import url('../blocks/popup/_opened/popup_opened.css');  
-@import url('../blocks/image-modal/image-modal.css');
+@import url('../blocks/figure/figure.css');
