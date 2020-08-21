@@ -38,6 +38,9 @@ function escAndClick(pop) {
     window.addEventListener("keyup", (evt) => {
       if (evt.key === "Escape") {
         pop.classList.remove("popup_opened");
+        window.removeEventListener("keyup", function () {
+            console.log("Event fired!");
+        });
       }
     });
   };
