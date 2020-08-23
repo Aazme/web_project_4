@@ -26,7 +26,7 @@ function togglePopup(modal) {
     modal.classList.toggle('popup_opened');
 }
 
-function handleEscapeKeyUp(evt,pop){
+const handleEscapeKeyUp = (evt,pop) => {
     if (evt.key === "Escape") {
         pop.classList.remove("popup_opened");
         window.removeEventListener("keyup",(ev)=> handleEscapeKeyUp(ev,pop));
