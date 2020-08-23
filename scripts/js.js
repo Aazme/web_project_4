@@ -26,6 +26,13 @@ function togglePopup(modal) {
     modal.classList.toggle('popup_opened');
 }
 
+function handleEscapeKeyUp(evt,pop){
+    if (evt.key === "Escape") {
+        pop.classList.remove("popup_opened");
+        window.removeEventListener("keyup",(ev)=> handleEscapeKeyUp(ev,pop));
+
+      }
+}
 function escAndClick(pop) {
     // Popups close with click outside box
     pop.addEventListener('click', (evt) => {
@@ -35,14 +42,7 @@ function escAndClick(pop) {
       }
     });
   
-    window.addEventListener("keyup", (evt) => {
-      if (evt.key === "Escape") {
-        pop.classList.remove("popup_opened");
-        window.removeEventListener("keyup", function () {
-            console.log("Event fired!");
-        });
-      }
-    });
+    window.addEventListener("keyup",(ev) => handleEscapeKeyUp(ev,pop));
   };
 
 function formSubmitHandler(event) { 
