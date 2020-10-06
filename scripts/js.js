@@ -26,23 +26,27 @@ function togglePopup(modal) {
     modal.classList.toggle('popup_opened');
 }
 
-const handleEscapeKeyUp = (evt,pop) => {
+const handleEscapeKeyUp = (evt) => {
+    console.log(evt);
     if (evt.key === "Escape") {
-        pop.classList.remove("popup_opened");
-        window.removeEventListener("keyup",(ev)=> handleEscapeKeyUp(ev,pop));
+        const el = document.getElementsByClassName("popup_opened");
+        console.log(el)
+        el[0].classList.remove("popup_opened");
+        window.removeEventListener("keyup",handleEscapeKeyUp);
 
       }
 }
-function escAndClick(pop) {
-    // Popups close with click outside box
-    pop.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains("popup")) {
-        pop.classList.remove("popup_opened");
+
+const escAndClickHandler = (evt) => {
+    console.log(evt)
+    if (evt.target.classList.contains("popup")) {
+        pop.target.classList.remove("popup_opened");
   
       }
-    });
-  
-    window.addEventListener("keyup",(ev) => handleEscapeKeyUp(ev,pop));
+}
+const escAndClick = (pop) => {
+    // Popups close with click outside box
+
   };
 
 function formSubmitHandler(event) { 
@@ -56,25 +60,31 @@ form.addEventListener('submit', formSubmitHandler);
 
 editButton.addEventListener('click', () => {
     togglePopup(editProfileModal);
-    escAndClick(editProfileModal)
+    editProfileModal.addEventListener('click', escAndClickHandler);
+    window.addEventListener("keyup",handleEscapeKeyUp);
+    //escAndClick()
 });
 editProfileCloseButton.addEventListener('click', () => {
     togglePopup(editProfileModal);
-    escAndClick(editProfileModal)
+    editProfileModal.addEventListener('click', escAndClickHandler);
+    window.addEventListener("keyup",handleEscapeKeyUp);
 });
 
 addButton.addEventListener('click', () => {
     togglePopup(addPhotoModal);
-    escAndClick(addPhotoModal)
+    addPhotoModal.addEventListener('click', escAndClickHandler);
+    window.addEventListener("keyup",handleEscapeKeyUp);
 });
 addPhotoCloseButton.addEventListener('click', () => {
     togglePopup(addPhotoModal);
-    escAndClick(addPhotoModal)
+    addPhotoModal.addEventListener('click', escAndClickHandler);
+    window.addEventListener("keyup",handleEscapeKeyUp);
 });
 
 imageCloseButton.addEventListener('click', () => {
     togglePopup(imageModal);
-    escAndClick(imageModal)
+    imageModal.addEventListener('click', escAndClickHandler);
+    window.addEventListener("keyup",handleEscapeKeyUp);
 });
 
 
