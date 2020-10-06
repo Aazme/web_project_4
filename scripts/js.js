@@ -44,10 +44,6 @@ const escAndClickHandler = (evt) => {
         window.removeEventListener("keyup",handleEscapeKeyUp);  
       }
 }
-const escAndClick = (pop) => {
-    // Popups close with click outside box
-
-  };
 
 function formSubmitHandler(event) { 
     event.preventDefault();
