@@ -30,7 +30,6 @@ const handleEscapeKeyUp = (evt) => {
     console.log(evt);
     if (evt.key === "Escape") {
         const el = document.getElementsByClassName("popup_opened");
-        console.log(el)
         el[0].classList.remove("popup_opened");
         window.removeEventListener("keyup",handleEscapeKeyUp);
 
@@ -40,8 +39,9 @@ const handleEscapeKeyUp = (evt) => {
 const escAndClickHandler = (evt) => {
     console.log(evt)
     if (evt.target.classList.contains("popup")) {
-        pop.target.classList.remove("popup_opened");
-  
+        const el = document.getElementsByClassName("popup_opened");
+        el[0].classList.remove("popup_opened");
+        window.removeEventListener("keyup",handleEscapeKeyUp);  
       }
 }
 const escAndClick = (pop) => {
